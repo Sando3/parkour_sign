@@ -92,7 +92,7 @@ public class main extends JavaPlugin implements Listener {
 	    	
 		Player p = e.getPlayer();
 		 
-		// OPs can always colour signs, customizable to let everyone colour them
+		// Colour signs
 		if (p.hasPermission("signs.color")) {
 			for (int i = 0; i < 4; i++) {
 				String line = e.getLines()[i];
@@ -101,7 +101,7 @@ public class main extends JavaPlugin implements Listener {
 			}
 		}
 		
-		// Only OPs can make the parkour signs
+		// Create parkour sign
 		if (!p.hasPermission("signs.parkour")) {
 			String parkourline1 = color(pl.getConfig().getString("signs.claim_sign.1").replace("{reward}", String.valueOf(pl.getConfig().getInt("parkour.reward", 15))));
 			if (color(e.getLines()[0]).equals(parkourline1)) e.setCancelled(true);
