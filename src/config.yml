@@ -1,0 +1,38 @@
+# # Sign messages for parkour # #
+  #  
+  #
+  # Color codes can be used with &
+  # - "reward.command" is run by console when a player successfully clicks the parkour sign.
+  # - "signs.claim_sign" is what the sign must say EXACTLY to work as the parkour sign.
+  #
+  #
+# # VARIABLES:
+  # %prefix%
+  # {user}
+  # {reward}
+  # {timeleft}
+  #
+  #
+# # PERMISSION NODES:
+  # "signs.color"    - you can colour signs
+  # "signs.parkour"  - you can create the parkour sign
+  #
+  #
+prefix: "&5[&dSkywars&5]"
+reward:
+  reward: 5
+  command: "/pay {user} {reward}"
+messages:
+  success: "%prefix% &7You got &a{reward} &7skybucks for completing the parkour!"
+  fail: "%prefix% &cYou need to wait &4{timeleft} &cbefore you can claim the daily parkour reward again!"
+signs:
+  claim_sign:
+    1: "&f[&9Parkour&f]"
+    2: ""
+    3: "&bClaim &e{reward}"
+    4: "&bdaily skybucks!"
+  already_claimed_sign:
+    1: "&f[&9Parkour&f]"
+    2: ""
+    3: "&cAlready claimed"
+    4: "&cthe reward today!"
